@@ -1,0 +1,91 @@
+body {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.container-fluid {
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/carl-heyerdahl-181868-unsplash.jpg");
+}
+
+
+/* -----------NAV --------*/
+
+nav ul {
+    margin: 0;
+}
+
+.brand {
+    color: #e3e3e3;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-align: left;
+    margin: auto;
+    position: relative;
+    left: 16px;
+}
+
+
+
+.navbar-links {
+    text-align: right;
+}
+
+.navbar-links li {
+    display: inline-block;
+}
+
+#navbar-big-screen-links {
+    padding: 8.5px 0;
+}
+
+
+.navbar-link {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #dae1e7;
+}
+
+
+
+
+
+
+/* -----------Hamburger Menu --------*/
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 720px) {
+
+    .hamburger {
+        display: inline-block;
+        margin-right: 48px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+
+    .hamburger .line {
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        height: 3px;
+        width: 48px;
+        display: block;
+        background-color: white;
+        margin: 8px 0;
+    }
+
+    #navbar-big-screen-links {
+        display: none;
+    }
+
+
+
+
+}

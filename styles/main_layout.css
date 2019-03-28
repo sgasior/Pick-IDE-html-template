@@ -8,7 +8,6 @@ body {
 .container-fluid {
     padding: 0;
     background: #071a52;
-    /*    height: 500px;*/
     height: 80vh;
 
     /*    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -67,7 +66,9 @@ nav ul {
     font-size: 14rem;
     color: white;
     text-align: right;
+    vertical-align: middle;
     padding-right: 50px;
+    margin: auto;
 }
 
 .big-heading {
@@ -76,39 +77,38 @@ nav ul {
     text-align: left;
     color: #a7ff83;
     position: relative;
-    top: 55px;
+    top: 58px;
     font-style: italic;
     padding-left: 50px;
-
 }
 
-/*
-.big-heading h1 {
-    transform: rotate(15deg);
-    -webkit-transform: rotate(6deg);
-    -moz-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    -o-transform: rotate(35deg);
-}*/
+.main-buttons {
+    margin-top: 50px;
+}
 
 
 
 
 /* -----------Buttons --------*/
 
-#navbar-big-screen-links .btn {
-    padding: 0 20px;
-    text-align: center;
-    width: 100px;
-}
-
-.register-button {
-    margin: 0 20px;
+.start-button {
+    margin: 0 10px;
     color: white;
+    width: 130px;
 }
 
 .login-button {
+    margin: 0 10px;
     border margin-right: 15px;
+    width: 130px;
+    background: #17b978;
+    color: black;
+    opacity: 0.8;
+}
+
+.login-button:hover {
+    color: white;
+    opacity: 1;
 }
 
 
@@ -130,6 +130,38 @@ nav ul {
     #navbar-big-screen-links {
         display: none;
     }
+
+
+    .big-heading {
+        position: static;
+        font-style: italic;
+        margin: auto 0;
+        padding-right: 50px;
+    }
+
+    .big-heading h1 {
+        font-size: 1.2rem;
+    }
+
+    .title-img {
+        font-size: 7rem;
+    }
+
+
+    .start-button {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .login-button {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .main-buttons {
+        margin: 0;
+    }
+
 
 }
 
@@ -166,7 +198,6 @@ nav ul {
 
 
 
-
 #navbar-small-screen-links {
     display: none;
     text-align: center;
@@ -176,6 +207,7 @@ nav ul {
 #navbar-small-screen-links ul {
     list-style-type: none;
     padding: 0;
+
 }
 
 #navbar-small-screen-links li {

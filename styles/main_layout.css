@@ -165,11 +165,12 @@ nav ul {
 }
 
 #about-app h2{
-    padding: 75px 150px 12px 150px;
+    padding: 75px 150px 50px 150px;
     text-transform: uppercase;
     text-align: center;
     color: #a7ff83;
 }
+
 .step{
     padding: 0 150px 12px 150px;
     text-align: left;
@@ -353,3 +354,43 @@ nav ul {
         display: none !important;
     }
 }
+
+
+@media (max-width: 836px) {
+
+    #about-app h2{
+        font-size: 1.5rem;
+    }
+    
+    .step{
+        text-align: center;
+    }
+    
+    .step-description{
+        display: block;
+    }
+}
+
+@media (max-width: 556px) {
+
+    #about-app h2{
+        font-size: 1.2rem;
+        padding: 75px 50px 12px 50px;
+    }
+    
+    .start-button {
+        width: 100px;
+    }
+
+    .login-button {
+      width: 100px;
+    }
+    
+    .big-heading h1{
+        font-size: 1rem;
+    }
+}
+
+
+
+

@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!--    BOOTSTRAP 4.3-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
 
-
+    <!--   ANIMATE CSS-->
+    <link rel="stylesheet" href="vendors/css/animate.css">
 
     <!--    OWN CREATED STYLES-->
     <link rel="stylesheet" href="styles/main_layout.css">
@@ -28,10 +29,10 @@
     <div class="container-fluid">
         <nav>
             <div class="row" id="sticky-nav">
-                <div class="col-sm-4 col-6" id="brand">
+                <div class="col-sm-4 col-6 animated fadeIn" id="brand">
                     Pick IDE
                 </div>
-                <div class="col-sm-8 col-6 navbar-links">
+                <div class="col-sm-8 col-6 navbar-links animated fadeIn">
                     <ul id="navbar-big-screen-links">
                         <li>
                             <a href="#" class="navbar-link">Guide</a>
@@ -73,12 +74,12 @@
             <div class="row">
 
                 <div class="col-6 title-img">
-                    <i class="fas fa-laptop-code">
+                    <i class="fas fa-laptop-code animated fadeIn">
                     
                     </i>
 
                 </div>
-                <div class="col-6 big-heading">
+                <div class="col-6 big-heading animated fadeIn">
                     <h1>
                         Choose the most suitable IDE to increase your work efficiency!
                     </h1>
@@ -91,12 +92,13 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
 
         <section id="features">
             <div class="feature-heading">
-                <h2>
+                <h2 class="animated slideInDown">
                     IDE is important for a programmer as a calculator is for mathematician!
                 </h2>
             </div>
@@ -161,9 +163,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="vendors/js/jquery-3.3.1.min.js"></script>
 
+
+    <script src="vendors/js/bootstrap.min.js"></script>
+
+
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

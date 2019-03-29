@@ -7,25 +7,36 @@ body {
 
 .container-fluid {
     padding: 0;
-    background: #071a52;
-    height: 80vh;
-
-    /*    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/carl-heyerdahl-181868-unsplash.jpg");*/
 }
 
+.row {
+    margin: 0;
+}
 
 /* -----------NAV --------*/
 
 nav {
-    padding: 3rem
+    background: #071a52;
+    padding: 3rem 0;
+    overflow: hidden;
+    transition: .35s;
 }
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #071a52;
+    z-index: 9999;
+}
+
 
 nav ul {
     margin: 0;
 }
 
-.brand {
+#brand {
     color: #a7ff83;
     font-family: 'Gochi Hand', cursive;
     font-weight: 900;
@@ -34,13 +45,15 @@ nav ul {
     position: relative;
     left: 16px;
     letter-spacing: 0.2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding-left: 3rem;
+    transition: .35s;
 }
-
 
 
 .navbar-links {
     text-align: right;
+    padding-right: 3rem;
 }
 
 .navbar-links li {
@@ -49,6 +62,8 @@ nav ul {
 
 #navbar-big-screen-links {
     padding: 8.5px 0;
+    font-size: 1.2rem;
+    transition: .35s;
 }
 
 
@@ -58,9 +73,26 @@ nav ul {
     color: #17b978;
 }
 
+/*CHANGING BRAND AND LINKS STYLE WHEN STICKY NAV IS ACTIVE*/
 
+.brand-fixed {
+    font-size: 2rem !important;
+    transition: .35s;
+}
 
-/* -----------Main section --------*/
+/*CHANGING BRAND AND LINKS STYLE WHEN STICKY NAV IS ACTIVE*/
+
+.navbar-big-screen-links-fixed {
+    font-size: 1rem !important;
+    transition: .35s;
+}
+
+/* -----------Main section--------*/
+
+#main {
+    background: #071a52;
+    height: 55vh;
+}
 
 .title-img {
     font-size: 14rem;
@@ -87,7 +119,38 @@ nav ul {
 }
 
 
+/* -----------Features section --------*/
 
+#features {
+    margin-top: 64px;
+}
+
+.feature-heading {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    margin: 0 200px;
+    color: #071a52;
+}
+
+.feature-box {
+    margin: 64px 0;
+    text-align: center;
+}
+
+.feature-box .fas {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #086972;
+}
+
+.feature-box h3 {
+    color: #071a52;
+}
+
+.feature-box p {
+    color: #071a52;
+    opacity: 0.7;
+}
 
 /* -----------Buttons --------*/
 
@@ -240,6 +303,9 @@ nav ul {
 @media (min-width: 720px) {
     #navbar-small-screen-links {
         display: none !important;
+    }
 
+    .hamburger {
+        display: none !important;
     }
 }

@@ -128,8 +128,9 @@ nav ul {
 .feature-heading {
     font-family: Roboto, sans-serif;
     text-align: center;
-    margin: 0 200px;
+    margin: 0 50px;
     color: #071a52;
+    text-transform: uppercase;
 }
 
 
@@ -151,6 +152,48 @@ nav ul {
 .feature-box p {
     color: #071a52;
     opacity: 0.7;
+}
+
+
+/* -----------About app section --------*/
+
+#about-app{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.75)), url(../images/artem-sapegin-176819-unsplash.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+#about-app h2{
+    padding: 75px 150px 12px 150px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #a7ff83;
+}
+.step{
+    padding: 0 150px 12px 150px;
+    text-align: left;
+}
+
+.step-number {
+    color: #a7ff83;
+    border: 2px solid #a7ff83;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    margin: 12px;
+    font-size: 1.5rem;
+    margin-right: 24px;
+}
+
+.step-description{
+    display: inline-block;
+    color:white;
+    position: relative;
+    bottom: 4px;
 }
 
 /* -----------Buttons --------*/

@@ -355,6 +355,14 @@ nav ul {
     }
 }
 
+@media (max-width: 1091px) {
+    .feature-box{
+            margin: 20px 0;
+    }
+
+}
+
+
 
 @media (max-width: 836px) {
 

@@ -48,7 +48,7 @@ function stickNav() {
 // --- STICKY NAV END---
 
 
-// -- - ANIMATION START-- -
+// -- - ANIMATION START---
 
 
 $(document).ready(function () {
@@ -58,7 +58,7 @@ $(document).ready(function () {
     $(".feature-box:nth-child(1)").css("opacity", 0);
 
     $(".feature-box:nth-child(1)").waypoint(function () {
-        $(".feature-box:nth-child(1)").addClass("animated bounceInDown");
+        $(".feature-box:nth-child(1)").addClass("animated bounceIn");
         $(".feature-box:nth-child(1)").css("opacity", 1);
     }, {
         offset: '80%'
@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     $(".feature-box:nth-child(2)").css("opacity", 0);
     $(".feature-box:nth-child(2)").waypoint(function () {
-        $(".feature-box:nth-child(2)").addClass("animated bounceInDown");
+        $(".feature-box:nth-child(2)").addClass("animated bounceIn");
         $(".feature-box:nth-child(2)").css("opacity", 1);
     }, {
         offset: '80%'
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     $(".feature-box:nth-child(3)").css("opacity", 0);
     $(".feature-box:nth-child(3)").waypoint(function () {
-        $(".feature-box:nth-child(3)").addClass("animated bounceInDown");
+        $(".feature-box:nth-child(3)").addClass("animated bounceIn");
         $(".feature-box:nth-child(3)").css("opacity", 1);
     }, {
         offset: '80%'
@@ -117,4 +117,80 @@ $(document).ready(function () {
         offset: '80%'
     });
 
+
+
+
+    $(".slider").css("opacity", 0);
+    $(".slider").waypoint(function () {
+        $(".slider").addClass("animated fadeIn");
+    }, {
+        offset: '80%'
+    });
+
 });
+
+
+
+// -- - SLIDER START-- -
+
+var imageNumber = 1;
+var actualImage;
+var nextImage;
+var numberOfAllImages = 3;
+var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+
+var sliderInterval = setInterval(function () {
+    slide("slide-right");
+}, 6000);
+
+
+//$("#how-it-works button").click(function () {
+//    var userChosenButton = this.id;
+//    slide(userChosenButton);
+//})
+
+
+function slide(userChosenButton) {
+    if (userChosenButton === "slide-right") {
+        if (imageNumber < numberOfAllImages) {
+            actualImage = $("#image-" + imageNumber);
+            nextImage = $("#image-" + (imageNumber + 1));
+        } else {
+            imageNumber = 0;
+            actualImage = $("#image-" + numberOfAllImages);
+            nextImage = $("#image-" + 1);
+        }
+
+        animateImages(actualImage, nextImage);
+        imageNumber = imageNumber + 1;
+
+    } else {
+        if (imageNumber > 1) {
+            actualImage = $("#image-" + imageNumber);
+            nextImage = $("#image-" + (imageNumber + -1));
+            imageNumber = imageNumber - 1;
+        } else {
+            actualImage = $("#image-" + imageNumber);
+            imageNumber = 3;
+            nextImage = $("#image-" + imageNumber);
+
+        }
+        animateImages(actualImage, nextImage);
+    }
+}
+
+
+function animateImages(actucalImage, nextImage) {
+    actualImage.addClass("animated fadeOutLeft").one(animationEnd, function () {
+
+        actualImage.removeClass("animated fadeOutLeft");
+
+        actualImage.addClass("hidden");
+        nextImage.removeClass("hidden");
+
+        nextImage.addClass("animated fadeInRight").one(animationEnd, function () {
+            nextImage.removeClass("animated bounceInRight")
+        });
+    });
+}

@@ -69,8 +69,14 @@ nav ul {
 
 .navbar-link {
     padding: 0 20px;
-    text-decoration: none;
     color: #17b978;
+    transition: color .3s;
+}
+
+.navbar-link:hover {
+    color: white;
+    text-decoration: none;
+    transition: color .3s;
 }
 
 /*CHANGING BRAND AND LINKS STYLE WHEN STICKY NAV IS ACTIVE*/
@@ -157,21 +163,21 @@ nav ul {
 
 /* -----------About app section --------*/
 
-#about-app{
+#about-app {
     background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.75)), url(../images/artem-sapegin-176819-unsplash.jpg);
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
     padding-bottom: 50px;
 }
 
-#about-app h2{
+#about-app h2 {
     padding: 75px 150px 50px 150px;
     text-transform: uppercase;
     text-align: center;
     color: #a7ff83;
 }
 
-.step{
+.step {
     padding: 0 150px 12px 150px;
     text-align: left;
 }
@@ -190,12 +196,93 @@ nav ul {
     margin-right: 24px;
 }
 
-.step-description{
+.step-description {
     display: inline-block;
-    color:white;
+    color: white;
     position: relative;
     bottom: 4px;
 }
+
+
+/* -----------How it works section --------*/
+
+#how-it-works {
+    background: #f6f5f5;
+}
+
+.slider {
+    margin: 0rem 4%;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.slider img {
+    margin: auto;
+    width: 50%;
+}
+
+.slider-description {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #071a52;
+    font-weight: 900;
+    font-style: italic;
+    display: inline-block;
+}
+
+
+#how-it-works .fas {
+    font-size: 2rem;
+    position: relative;
+    bottom: 2rem;
+}
+
+#how-it-works .hidden {
+    display: none;
+}
+
+
+/* -----------Footer section--------*/
+
+#footer {
+    background-color: #086972;
+    color: white;
+    display: block;
+}
+
+.media {
+    margin: auto;
+}
+
+.media ul li {
+    display: inline-block;
+}
+
+#footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.media a {
+    padding: 0px;
+}
+
+.social-icon {
+    margin: 20px 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.copyright {
+    margin: auto;
+    padding-bottom: 16px;
+}
+
 
 /* -----------Buttons --------*/
 
@@ -217,6 +304,15 @@ nav ul {
 .login-button:hover {
     color: white;
     opacity: 1;
+}
+
+.slider-arrow-button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: inherit;
+    color: inherit;
 }
 
 
@@ -356,8 +452,8 @@ nav ul {
 }
 
 @media (max-width: 1091px) {
-    .feature-box{
-            margin: 20px 0;
+    .feature-box {
+        margin: 20px 0;
     }
 
 }
@@ -366,39 +462,43 @@ nav ul {
 
 @media (max-width: 836px) {
 
-    #about-app h2{
+    #about-app h2 {
         font-size: 1.5rem;
     }
-    
-    .step{
+
+    .step {
         text-align: center;
     }
-    
-    .step-description{
+
+    .step-description {
         display: block;
+    }
+
+    .slider img {
+        width: 80%;
     }
 }
 
 @media (max-width: 556px) {
 
-    #about-app h2{
+    #about-app h2 {
         font-size: 1.2rem;
         padding: 75px 50px 12px 50px;
     }
-    
+
     .start-button {
         width: 100px;
     }
 
     .login-button {
-      width: 100px;
+        width: 100px;
     }
-    
-    .big-heading h1{
+
+    .big-heading h1 {
         font-size: 1rem;
     }
+
+    .slider img {
+        width: 100%;
+    }
 }
-
-
-
-

@@ -194,3 +194,14 @@ function animateImages(actucalImage, nextImage) {
         });
     });
 }
+
+
+// -- - SLIDER END-- -
+
+
+// -- - TOGGLE BUTTON START-- -
+
+
+$(".toggle-btn").click(function () {
+    $(this).toggleClass("active-toggle");
+});

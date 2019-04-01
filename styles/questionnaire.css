@@ -1,0 +1,13 @@
+#main {
+    height: auto;
+}
+
+.question {
+    padding: 64px 150px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#question-1 {
+    background-color: #f8f1f1;
+}

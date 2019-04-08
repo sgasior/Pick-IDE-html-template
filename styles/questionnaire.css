@@ -27,6 +27,10 @@
     background-color: #c19191;
 }
 
+#question-4 {
+    background-color: #ffffb5;
+}
+
 
 #questions .toggle-btn {
     margin-left: auto;
@@ -190,5 +194,6 @@
 }
 
 
-
+.next-button {
+    width: 28%;
 }

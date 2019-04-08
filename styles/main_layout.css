@@ -37,7 +37,6 @@ nav ul {
 }
 
 #brand {
-    color: #a7ff83;
     font-family: 'Gochi Hand', cursive;
     font-weight: 900;
     text-align: left;
@@ -48,6 +47,17 @@ nav ul {
     font-size: 2.5rem;
     padding-left: 3rem;
     transition: .35s;
+}
+
+#brand a {
+    text-decoration: none;
+    color: #a7ff83;
+    transition: color .3s;
+}
+
+#brand a:hover {
+    color: white;
+    transition: color .3s;
 }
 
 

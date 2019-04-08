@@ -29,6 +29,7 @@
 
 #question-4 {
     background-color: #ffffb5;
+    padding-bottom: 60px;
 }
 
 
@@ -38,14 +39,12 @@
 }
 
 #question-2 .answer {
-    width: 90%;
     text-align: left;
     margin: auto;
     margin-left: 30%
 }
 
 #question-3 .answer {
-    width: 90%;
     text-align: left;
     margin: auto;
     margin-left: 30%
@@ -58,7 +57,6 @@
 .answer {
     padding: 8px 0;
 }
-
 
 
 /* -----------Checkboxes--------*/
@@ -146,14 +144,9 @@
 }
 
 
-
 .radio input[type="radio"]:checked + label:after {
     opacity: 1;
 }
-
-
-
-
 
 
 /* -----------Buttons--------*/

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pick IDE</title>
+    <title>Questionnaire</title>
 
     <!--   GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900i|Montserrat|Roboto|Gochi+Hand" rel="stylesheet">
@@ -36,15 +36,22 @@
                 </div>
                 <div class="col-sm-8 col-6 navbar-links animated fadeIn">
                     <ul id="navbar-big-screen-links">
+
+                        <li>
+                            <a href="#" class="navbar-link">Register</a>
+                        </li>
+                        <li>
+                            <form method="POST" action="/logout">
+                                <button class="button-logout">
+                                Logout
+                            </button>
+                            </form>
+                        </li>
                         <li>
                             <a href="#" class="navbar-link">Guide</a>
                         </li>
-
                         <li>
                             <a href="#" class="navbar-link">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#" class="navbar-link">About project</a>
                         </li>
 
                     </ul>
@@ -58,14 +65,22 @@
             <div class="row" id="navbar-small-screen-links">
                 <ul>
                     <li>
-                        <a href="#">Guide<i class="fas fa-hands-helping"></i></a>
+                        <a href="#">Register<i class="fas fa-hands-helping"></i></a>
                     </li>
                     <li>
-                        <a href="#">About<i class="fas fa-info-circle"></i></a>
+                        <form method="POST" action="/logout">
+                            <button class="button-logout">
+                                Logout<i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </form>
+
                     </li>
 
                     <li>
-                        <a href="#">Contact<i class="fas fa-address-book"></i></a>
+                        <a href="#">Guide<i class="fas fa-wrench"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Contact<i class="fas fa-info"></i></a>
                     </li>
                 </ul>
             </div>

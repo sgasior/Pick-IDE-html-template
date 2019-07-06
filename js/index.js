@@ -145,12 +145,6 @@ var sliderInterval = setInterval(function () {
 }, 6000);
 
 
-//$("#how-it-works button").click(function () {
-//    var userChosenButton = this.id;
-//    slide(userChosenButton);
-//})
-
-
 function slide(userChosenButton) {
     if (userChosenButton === "slide-right") {
         if (imageNumber < numberOfAllImages) {
@@ -199,9 +193,86 @@ function animateImages(actucalImage, nextImage) {
 // -- - SLIDER END-- -
 
 
-// -- - TOGGLE BUTTON START-- -
+// -- - TOGGLE CHECKBOX START-- -
 
 
-$(".toggle-btn").click(function () {
+
+$("label[for='toggle-checkbox']").before().click(function () {
     $(this).toggleClass("active-toggle");
 });
+
+
+if ($("#toggle-checkbox").attr("checked")) {
+    $("label[for='toggle-checkbox']").addClass("active-toggle");
+
+}
+
+
+
+
+// -- - MULTIPLE STEP FORM START-- -
+
+
+var currentTab = 0; // Current tab is set to be the
+displayTab(currentTab); // Display the current tab
+
+
+function updateStepActive(n) {
+
+    step = $(".step-circle");
+    for (var i = 0; i < step.length; i++) {
+        step[i].className = step[i].className.replace(" active-step", "");
+    }
+
+    step[n].className += " active-step";
+}
+
+
+
+function displayTab(tabNumber) {
+    var tab = $(".tab");
+    tab[tabNumber].style.display = "block";
+
+    if (currentTab == 0) {
+        $("#prevBtn").css("display", "none");
+    } else {
+        $("#prevBtn").css("display", "inline-block");
+    }
+
+    if (currentTab == 1) {
+        $("#addCriteria").css("display", "inline-block");
+        $("#nextBtn").css("margin-left", "0");
+    } else {
+        $("#nextBtn").css("margin-left", "auto");
+        $("#addCriteria").css("display", "none");
+    }
+
+    if (currentTab == 2) {
+        $("#addAlternative").css("display", "inline-block");
+        $("#nextBtn").css("margin-left", "0");
+    } else {
+        $("#addAlternative").css("display", "none");
+    }
+
+
+    if (currentTab == (tab.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Submit";
+    } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+    }
+
+    updateStepActive(tabNumber);
+}
+
+
+function nextView(n) {
+    var tab = $(".tab");
+    console.log(currentTab);
+    tab[currentTab].style.display = "none";
+    currentTab = currentTab + n;
+    if (currentTab >= tab.length) {
+        document.getElementById("surveyForm").submit();
+        return false;
+    }
+    displayTab(currentTab);
+}

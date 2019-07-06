@@ -38,7 +38,7 @@
                     <ul id="navbar-big-screen-links">
 
                         <li>
-                            <a href="#" class="navbar-link">Register</a>
+                            <a href="register.html" class="navbar-link">Register</a>
                         </li>
                         <li>
                             <form method="POST" action="/logout">
@@ -90,11 +90,23 @@
             <div class="question" id="question-1">
                 <h5>Do you want to make a choice with others <strong>(Registration required)</strong></h5>
                 <div class="answers">
-                    <div class="answer">
-                        <div class="toggle-btn">
-                            <div class="circle-inner">
+                    <!--
+<div class="answer">
+    <div class="toggle-btn">
+        <div class="circle-inner">
 
-                            </div>
+        </div>
+    </div>
+</div>
+-->
+                    <div class="answer">
+                        <div class="toggle-checkbox">
+                            <input type="checkbox" id="toggle-checkbox">
+                            <label for="toggle-checkbox">
+                                <div class="circle-inner">
+
+                                </div>
+                           </label>
                         </div>
                     </div>
                 </div>
@@ -154,7 +166,7 @@
                 <h5>Click button to continute</h5>
                 <div class="answers">
                     <div class="answer">
-                        <button type="button" class="btn btn-dark next-button">Next</button>
+                        <button type="button" class="btn btn-dark next-button" onclick="window.location.href='survey-form.html'">Next</button>
                     </div>
                 </div>
             </div>

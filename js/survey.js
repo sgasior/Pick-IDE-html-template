@@ -86,12 +86,16 @@ function nextView(n) {
 // -- - DYNAMICALLY ADDING FORMS START-- -
 
 
-var criteriaCounter = 1;
-var alternativeCounter = 1;
+var criteria_id_counter = 1;
+var totalCriteriasCreated = 1;
+
+var alternative_id_counter = 1;
+var totalAlternativesCreated = 1;
 var max = 5;
 
+
 function addCriterias() {
-    if (criteriaCounter == max) {
+    if (totalCriteriasCreated == max) {
         alert("Sorry but you have reached the limit of adding criterias");
         return;
     }
@@ -110,8 +114,9 @@ function acceptCriterias(divName, criteriaName) {
 
     $(".new-inputs-msg").css("display", "block");
     var newdiv = document.createElement("div");
-    newdiv.innerHTML = "<div class='checkbox'><input type='checkbox' id='newCriteria_" + criteriaCounter + "'> <label for = 'newCriteria_" + criteriaCounter + "'>" + criteriaName + "</label> </div>";
-    criteriaCounter++;
+    newdiv.innerHTML = "<div class='checkbox' id='checkbox_criteria_" + criteria_id_counter + "'><button type='button' class='deleteCheckbox' id='deleteCriteria_" + criteria_id_counter + "' onclick='deleteCriteria(this.id)'>X</button><input type='checkbox' id='newCriteria_" + criteria_id_counter + "'> <label for = 'newCriteria_" + criteria_id_counter + "'>" + criteriaName + "</label> </div>";
+    criteria_id_counter++;
+    totalCriteriasCreated++;
     document.getElementById(divName).appendChild(newdiv);
 
     $("#tab2").css("display", "block");
@@ -128,7 +133,7 @@ function cancelAddingCriteria() {
 }
 
 function addAlternatives() {
-    if (alternativeCounter == max) {
+    if (totalAlternativesCreated == max) {
         alert("Sorry but you have reached the limit of adding alternatives");
         return;
     }
@@ -145,9 +150,13 @@ function acceptAlternatives(divName, alternativeName) {
     }
 
     $(".new-inputs-msg").css("display", "block");
+
     var newdiv = document.createElement("div");
-    newdiv.innerHTML = "<div class='checkbox'><input type='checkbox' id='newAlternative_" + alternativeCounter + "'> <label for = 'newAlternative_" + alternativeCounter + "'>" + alternativeName + "</label> </div>";
-    alternativeCounter++;
+
+    newdiv.innerHTML = "<div class='checkbox' id='checkbox_alternative_" + alternative_id_counter + "'><button type='button' class='deleteCheckbox' id='deleteAlternative_" + alternative_id_counter + "' onclick='deleteAlternative(this.id)'>X</button><input type='checkbox' id='newAlternative_" + alternative_id_counter + "'> <label for = 'newAlternative_" + alternative_id_counter + "'>" + alternativeName + "</label> </div>";
+
+    alternative_id_counter++;
+    totalAlternativesCreated++;
     document.getElementById(divName).appendChild(newdiv);
 
     $("#tab3").css("display", "block");
@@ -161,4 +170,20 @@ function cancelAddingAlternatives() {
     $("#tab3").css("display", "block");
     $(".stepsButtons").css("display", "flex");
     $("#tab-add-alternatives").css("display", "none");
+}
+
+function deleteCriteria(clicked_id) {
+    id = clicked_id.substring(clicked_id.indexOf("_") + 1, clicked_id.length);
+
+    var el = document.getElementById('checkbox_criteria_' + id);
+    el.remove();
+    totalCriteriasCreated--;
+}
+
+function deleteAlternative(clicked_id) {
+    id = clicked_id.substring(clicked_id.indexOf("_") + 1, clicked_id.length);
+
+    var el = document.getElementById('checkbox_alternative_' + id);
+    el.remove();
+    totalAlternativesCreated--;
 }

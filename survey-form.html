@@ -22,7 +22,7 @@
 
     <!--    OWN CREATED STYLES-->
     <link rel="stylesheet" href="styles/main_layout.css">
-    <link rel="stylesheet" href="/styles/survey-form.css">
+    <link rel="stylesheet" href="styles/survey-form.css">
 </head>
 
 
@@ -148,7 +148,6 @@
                                 </div>
 
                                 <hr>
-
                                 <p>Other criterias:</p>
 
                                 <div class="row">
@@ -177,6 +176,18 @@
                                         <label for="checkbox_9">Criteria 5</label>
                                     </div>
                                 </div>
+                                <div class="new-inputs-msg">
+                                    <hr>
+                                    <p>Added criterias:</p>
+                                </div>
+
+                                <div class="row" id="new-criterias">
+
+                                </div>
+
+
+
+
 
                             </div>
 
@@ -235,17 +246,58 @@
                                         <input type="checkbox" id="checkbox_9">
                                         <label for="checkbox_9">Alternative 5</label>
                                     </div>
+
                                 </div>
+
+
+                                <div class="new-inputs-msg">
+                                    <hr>
+                                    <p>Added alternatives:</p>
+                                </div>
+
+                                <div class="row" id="new-alternatives">
+
+                                </div>
+
 
                             </div>
 
 
 
+                            <div class="survey-inputs" id="tab-add-criteria">
+                                <div class="survey-input">
+                                    <label for="criteria_name">Criteria name:</label>
+                                    <input type="text" name="criteria_name" id="criteria_name" required>
+                                    <button type="button" class="acceptCriteria" onclick="acceptCriterias('new-criterias',document.getElementById('criteria_name').value)">
+                                        Accept
+                                    </button>
+                                    <button type="button" class="cancelAdding" onclick="cancelAddingCriteria()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <div class="survey-inputs" id="tab-add-alternatives">
+                                <div class="survey-input">
+                                    <label for="alternative_name">Alternative name:</label>
+                                    <input type="text" name="alternative_name" id="alternative_name" required>
+                                    <button type="button" class="acceptCriteria" onclick="acceptAlternatives('new-alternatives',document.getElementById('alternative_name').value)">
+                                        Accept
+                                    </button>
+                                    <button type="button" class="cancelAdding" onclick="cancelAddingAlternatives()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+
+
+
                             <div class="stepsButtons">
-                                <button type="button" id="addCriteria">
+                                <button type="button" id="addCriteria" onclick="addCriterias()">
                                     Add Criteria
                                 </button>
-                                <button type="button" id="addAlternative">
+                                <button type="button" id="addAlternative" onclick="addAlternatives()">
                                     Add Alternative
                                 </button>
                                 <button type="button" id="prevBtn" onclick="nextView(-1)">
@@ -256,6 +308,9 @@
                                 </button>
 
                             </div>
+
+
+
 
                             <div class="steps">
                                 <div class="step-circle"></div>
@@ -310,9 +365,7 @@
 
     <script src="vendors/js/bootstrap.min.js "></script>
 
-
-    <script src="vendors/js/jquery.waypoints.min.js "></script>
-    <script src="js/index.js "></script>
+    <script src="js/survey.js"></script>
 </body>
 
 </html>

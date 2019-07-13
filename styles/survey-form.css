@@ -154,6 +154,10 @@ body {
 
 /* -----------BUTTONS--------*/
 
+button:focus {
+    outline: 0;
+}
+
 #prevBtn {
     width: 120px;
     height: 50px;
@@ -161,6 +165,7 @@ body {
     border: 1px solid #086972;
     border-radius: 10px;
     margin-right: 12px;
+
 }
 
 #nextBtn {

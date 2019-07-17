@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pick IDE</title>
+    <title>Questionnaire</title>
 
     <!--   GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900i|Montserrat|Roboto|Gochi+Hand" rel="stylesheet">
@@ -22,6 +22,8 @@
 
     <!--    OWN CREATED STYLES-->
     <link rel="stylesheet" href="styles/main_layout.css">
+
+    <link rel="stylesheet" href="styles/survey-form-extra-info.css">
 </head>
 
 <body>
@@ -63,7 +65,7 @@
             <div class="row" id="navbar-small-screen-links">
                 <ul>
                     <li>
-                        <a href="register.html">Register<i class="fas fa-hands-helping"></i></a>
+                        <a href="#">Register<i class="fas fa-hands-helping"></i></a>
                     </li>
                     <li>
                         <form method="POST" action="/logout">
@@ -84,109 +86,51 @@
             </div>
         </nav>
 
-        <section id="main">
+        <section id="questions">
+            <div class="survey-info">
+                <h5>
+                    <strong>Take into consideration consistency of answers</strong>
+                </h5>
+                <h5>In next step you will be doing pairwise comparison <br>using the previously chosen criteria and alternatives</h5>
 
-            <div class="row">
+            </div>
 
-                <div class="col-6 title-img">
-                    <i class="fas fa-laptop-code animated fadeIn">
-                    
-                    </i>
 
-                </div>
-                <div class="col-6 big-heading animated fadeIn">
-                    <h1>
-                        Choose the most suitable IDE to increase your work efficiency!
-                    </h1>
+            <div class="survey-info" id="question-1">
+                <h5><strong>Which way will you choose when comparing selected IDEs</strong></h5>
+                <div class="answers">
 
-                    <div class="row main-buttons">
-                        <button type="button" class="btn btn-outline-light start-button" onclick="window.location.href='start.html'">
-                        Start
-                        </button>
+                    <div class="answer">
+                        <div class="radio">
+                            <input type="radio" id="automatic-rating" name="rating" value="automatic-rating" checked>
+                            <label for="automatic-rating"><strong>I would like to use already made rating for IDEs </strong><br> (recommended for beginners)</label>
+                        </div>
+                    </div>
 
-                        <button type="button" class="btn login-button" onclick="window.location.href='login.html'">Login</button>
-
+                    <div class="answer">
+                        <div class="radio">
+                            <input type="radio" id="manually-rating" name="rating" value="manually-rating">
+                            <label for="manually-rating"><strong>I would like to rate all IDEs manually</strong> <br>Select only if you know all selected IDE's very well. <br> (not recommended for beginners)</label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </section>
 
+            <div class="survey-info" id="question-2">
+                <h5>Generate survey</h5>
+                <div class="answers">
+                    <div class="answer">
 
-        <section id="features">
-            <div class="feature-heading">
-                <h2 class="animated slideInDown">
-                    IDE is important for a programmer as a calculator is for mathematician!
-                </h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-12 feature-box">
-                    <i class="fas fa-check-square"></i>
-                    <h3><strong>Code checking</strong></h3>
-                    <p>Forget about typos or stupid mistakes in your code!</p>
-                </div>
-                <div class="col-lg-4 col-sm-12 feature-box">
-                    <i class="fas fa-bug"></i>
-                    <h3><strong>Debugging</strong></h3>
-                    <p>Inspect your executing app step by step</p>
-                </div>
-                <div class="col-lg-4 col-sm-12 feature-box">
-                    <i class="fas fa-code"></i>
-                    <h3><strong>Refactoring &amp; Clean Code</strong></h3>
-                    <p>Make your code clean fast and easy! </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="about-app">
-
-            <h2>Choose the most suitable IDE for your needs in <strong>3 steps</strong> USIGN AHP METHOD!</h2>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">
-                        1
-                    </div>
-                    <div class="step-description">
-                        Complete a short survey with your IDE preferences
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        2
-                    </div>
-                    <div class="step-description">
-                        Comparison with pairs of selected criteria
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        3
-                    </div>
-                    <div class="step-description">
-                        Find out which IDE meets your expectations
+                        <button type="button" class="btn btn-danger start-survey-button" onclick="window.location.href='survey-form.html'">Start</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="how-it-works">
-            <div class="slider">
-                <div class="slider-description">
-                    Analytic Hierarchy Process - how does it work?
-                </div>
-                <div>
-                    <!--                    <button type="button" class="slider-arrow-button" id="slide-left"><i class=" fas fa-chevron-left "></i></button>-->
 
-                    <img src="images/how-it-works/1.png" id="image-1">
-                    <img src="images/how-it-works/2.png" id="image-2" class="hidden">
-                    <img src="images/how-it-works/3.png" id="image-3" class="hidden">
-                    <!--                    <button type="button" class="slider-arrow-button" id="slide-right"><i class="fas fa-chevron-right "></i></button>-->
-                </div>
-            </div>
         </section>
 
         <section id="footer">
+
             <div class="row">
                 <div class="media">
                     <ul>
@@ -216,12 +160,11 @@
 
     <script src="vendors/js/jquery-3.3.1.min.js "></script>
 
-
     <script src="vendors/js/bootstrap.min.js "></script>
 
+    <script src="js/index.js"></script>
 
-    <script src="vendors/js/jquery.waypoints.min.js "></script>
-    <script src="js/index.js "></script>
+    <script src="js/survey.js"></script>
 </body>
 
 </html>

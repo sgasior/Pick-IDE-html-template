@@ -56,6 +56,7 @@ function displayTab(tabNumber) {
 
     if (currentTab == (tab.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
+
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }

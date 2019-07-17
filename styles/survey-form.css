@@ -67,6 +67,12 @@ body {
     margin-bottom: 24px;
 }
 
+.adding-warning {
+    margin: 10px 0 0 0;
+    color: black;
+    text-align: left;
+    font-size: 14px
+}
 
 #tab2 .row {
     width: 75%;

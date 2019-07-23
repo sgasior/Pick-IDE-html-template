@@ -111,6 +111,10 @@ function acceptCriterias(divName, criteriaName) {
         alert("Criteria  cannot contain whitespaces");
         return;
     }
+    if (criteriaName.length > 12) {
+        alert("Criteria cannot have more than 12 characters");
+        return;
+    }
 
     $(".new-inputs-msg").css("display", "block");
     var newdiv = document.createElement("div");
@@ -150,6 +154,10 @@ function acceptAlternatives(divName, alternativeName) {
     }
     if (alternativeName.includes(" ")) {
         alert("Alternative  cannot contain whitespaces");
+        return;
+    }
+    if (alternativeName.length > 12) {
+        alert("Criteria cannot have more than 12 characters");
         return;
     }
 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <!--   GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900i|Montserrat|Roboto|Gochi+Hand" rel="stylesheet">
+
+
+
+    <!--   FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--    BOOTSTRAP 4.3-->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+
+    <!--   ANIMATE CSS-->
+    <link rel="stylesheet" href="vendors/css/animate.css">
+
+    <!--    OWN CREATED STYLES-->
+    <link rel="stylesheet" href="styles/main_layout.css">
+    <link rel="stylesheet" href="styles/account.css">
+</head>
+
+
+
+<body>
+
+    <div class="container-fluid">
+
+        <nav>
+            <div class="row" id="sticky-nav">
+                <div class="col-sm-4 col-6 animated fadeIn" id="brand">
+                    <a href="index.html">Pick IDE</a>
+                </div>
+                <div class="col-sm-8 col-6 navbar-links animated fadeIn">
+                    <ul id="navbar-big-screen-links">
+
+                        <li>
+                            <a href="#" class="navbar-link">Register</a>
+                        </li>
+                        <li>
+                            <form method="POST" action="/logout">
+                                <button class="button-logout">
+                                Logout
+                            </button>
+                            </form>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar-link">Guide</a>
+                        </li>
+                        <li>
+                            <a href="#" class="navbar-link">Contact</a>
+                        </li>
+
+                    </ul>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="navbar-small-screen-links">
+                <ul>
+                    <li>
+                        <a href="#">Register<i class="fas fa-hands-helping"></i></a>
+                    </li>
+                    <li>
+                        <form method="POST" action="/logout">
+                            <button class="button-logout">
+                                Logout<i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </form>
+
+                    </li>
+
+                    <li>
+                        <a href="#">Guide<i class="fas fa-wrench"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Contact<i class="fas fa-info"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="answer">
+
+
+
+
+            <div class="row h-100 justify-content-center align-items-center">
+
+                <div class="col-lg-8 col-md-12">
+                    <div class="box">
+
+
+                        <div id="surveys">
+                            <div class="welcome-msg">
+                                There is a list of your shared surveys:
+                            </div>
+
+                            <table class="table table-hover">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Survey name</th>
+                                        <th scope="col">Survey link</th>
+                                        <th scope="col">Result link</th>
+                                        <th scope="col">Delete survey</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Survey_1</th>
+
+                                        <td class="link">
+                                            <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+                                        </td>
+                                        <td class="result">
+                                            <a href="#"><i class="fas fa-poll"></i></a>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Survey_2</th>
+
+                                        <td class="link">
+                                            <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+                                        </td>
+                                        <td class="result">
+                                            <a href="#"><i class="fas fa-poll"></i></a>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Survey_3</th>
+
+                                        <td class="link">
+                                            <a href="#"> <i class="fas fa-external-link-alt"></i></a>
+                                        </td>
+                                        <td class="result">
+                                            <a href="#"><i class="fas fa-poll"></i></a>
+                                        </td>
+                                        <td class="trash">
+                                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="footer">
+
+            <div class="row">
+                <div class="media">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/szymon-gasior/ "><i class="social-icon fab fa-linkedin "></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sgasior "><i class="social-icon fab fa-github "></i></a>
+                        </li>
+                        <li>
+                            <a href="mailto:szgasior@gmail.com?subject=Pick-IDE&body=Treść wiadomości "><i class="social-icon far fa-envelope "></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="copyright">
+                    © Copyright 2019 Pick IDE
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+
+    <script src="vendors/js/jquery-3.3.1.min.js "></script>
+
+
+    <script src="vendors/js/bootstrap.min.js "></script>
+    <script src="js/index.js"></script>
+    <script src="js/answer.js"></script>
+</body>
+
+</html>
